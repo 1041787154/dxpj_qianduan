@@ -1,0 +1,54 @@
+import Vue from 'vue'
+import Router from 'vue-router'
+import index from '@/components/index'
+import choiceDepartment from '@/components/choiceDepartment'
+import makeAnswer from '@/components/makeAnswer'
+import redLineDia from '@/components/redLineDia'
+import quesDia from '@/components/quesDia'
+import quesDia_one from '@/components/quesDia_one'
+
+// 导入 table 和 分页组件
+import { VTable, VPagination } from 'vue-easytable'
+
+// 注册到全局
+Vue.component(VTable.name, VTable)
+Vue.component(VPagination.name, VPagination)
+Vue.use(Router)
+
+
+
+
+export default new Router({
+  routes: [
+    {
+      path: '/',
+      name: 'index',
+      component: index
+    },
+    {
+      path: '/choiceDepartment',
+      name: 'choiceDepartment',
+      component: choiceDepartment
+    },
+    {
+      path: '/makeAnswer',
+      name: 'makeAnswer',
+      component: makeAnswer
+    },
+    {
+      path: '/redLineDia',
+      name: 'redLineDia',
+      component: redLineDia
+    },
+     {
+      path: '/quesDia',
+      name: 'quesDia',
+      component: quesDia
+    },
+    {
+      path: '/quesDia_one',
+      name: 'quesDia_one',
+      component: quesDia_one
+    }
+  ]
+})
